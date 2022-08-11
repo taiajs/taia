@@ -9,6 +9,7 @@ import fetch from '../compiled/node-fetch';
 import yParser from '../compiled/yargs-parser';
 import semver from '../compiled/semver';
 import * as logger from './logger';
+export * from './isLocalDev';
 
 export {
   /** only node */

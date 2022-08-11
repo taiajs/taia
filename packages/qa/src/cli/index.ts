@@ -1,14 +1,18 @@
-import { yParser, semver, chalk } from '@txpjs/utils-node';
-import { join } from 'path';
-import { existsSync } from 'fs';
+import { yParser, semver, chalk, isLocalDev } from '@txpjs/utils-node';
 
-const args = yParser(process.argv.slice(2));
+const args = yParser(process.argv.slice(2), {
+  alias: {
+    version: ['v'],
+    help: ['h'],
+  },
+  boolean: ['version'],
+});
 
-if (args.v || args.version) {
-  console.log(require('./package').version);
-  if (existsSync(join(__dirname, '.local'))) {
-    console.log(chalk.cyan('@local'));
-  }
+if (args.version && !args._[0]) {
+  args._[0] = 'version';
+  const local = isLocalDev() ? chalk.cyan('@local') : '';
+  const { name, version } = require('../../package.json');
+  console.log(`${name}@${version}${local}`);
   process.exit(0);
 }
 
@@ -22,7 +26,7 @@ const option = args._[0];
 switch (option) {
   case 'verifyCommit':
     // eslint-disable-next-line global-require
-    require('./dist/verifyCommit');
+    require('../config/verify-commit');
     break;
 
   default:
