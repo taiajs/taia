@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import tsEslintConfig from './tsEslintConfig';
+import tsEslintConfig from './ts-eslint-config';
 
 const isTypeAwareEnabled = process.env.DISABLE_TYPE_AWARE === undefined;
 
@@ -38,7 +38,8 @@ if (isTsProject) {
     console.log(e);
   }
 }
-export default {
+
+module.exports = {
   extends: ['prettier', 'plugin:react/recommended'],
   parser: '@babel/eslint-parser',
   plugins: ['react', 'jest', 'unicorn', 'react-hooks'],

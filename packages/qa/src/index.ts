@@ -1,3 +1,3 @@
-import { stylelint, prettier, eslint, createTestConfig } from './config';
+import { stylelint, prettier, eslint, createTestConfig, TestConfig } from './config';
 
-export default { stylelint, prettier, eslint, createTestConfig };
+export { stylelint, prettier, eslint, createTestConfig, TestConfig };

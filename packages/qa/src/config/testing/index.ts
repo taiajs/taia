@@ -1,9 +1,9 @@
-import type { Config } from '@jest/types';
-import { Path, TransformerConfig } from '@jest/types/build/Config';
+import type { Config as TestConfig } from '@jest/types';
+import type { Path, TransformerConfig } from '@jest/types/build/Config';
 
 export type JSTransformer = 'esbuild' | 'swc' | 'ts-jest';
 
-export type { Config };
+export type { TestConfig };
 
 function getJSTransformer(jsTransformer: JSTransformer, opts?: any): TransformerConfig | Path {
   switch (jsTransformer) {
@@ -22,8 +22,8 @@ export function createTestConfig(opts?: {
   jsTransformer?: JSTransformer;
   target?: 'node' | 'browser';
   jsTransformerOpts?: any;
-}): Config.InitialOptions {
-  const config: Config.InitialOptions = {
+}): TestConfig.InitialOptions {
+  const config: TestConfig.InitialOptions = {
     testMatch: ['**/*.test.(t|j)s(x)?'],
     transform: {
       '^.+\\.(t|j)sx?$': getJSTransformer(

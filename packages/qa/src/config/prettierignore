@@ -1,7 +1,5 @@
 **/*.svg
 package.json
-.umi
-.umi-production
 /dist
 .dockerignore
 .DS_Store
@@ -24,8 +22,6 @@ CNAME
 /public
 **/*.svg
 package.json
-**/.umi/**
-**/.umi-production/**
 **/dist/**
 **/lib/**
 **/es/**

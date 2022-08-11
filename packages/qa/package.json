@@ -41,6 +41,7 @@
     "@babel/preset-typescript": "^7.12.7",
     "@jest/types": "27.5.1",
     "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@txpjs/utils-node": "^1.0.0-alpha.5",
     "@typescript-eslint/eslint-plugin": "5.27.1",
     "@typescript-eslint/parser": "5.27.1",
     "@umijs/babel-preset-umi": "4.0.12",

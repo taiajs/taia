@@ -1,6 +1,6 @@
-import eslint from './eslint';
+import * as eslint from './eslint';
 import prettier from './prettier';
 import stylelint from './stylelint';
-import { createTestConfig } from './testing';
+import { createTestConfig, TestConfig } from './testing';
 
-export { stylelint, prettier, eslint, createTestConfig };
+export { stylelint, prettier, eslint, createTestConfig, TestConfig };
