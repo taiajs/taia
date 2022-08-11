@@ -1,0 +1,91 @@
+{
+  "name": "@txpjs/qa",
+  "version": "1.0.0",
+  "description": "A collection of front-end project quality assurance",
+  "keywords": [
+    "eslint",
+    "prettier",
+    "jest",
+    "stylelint",
+    "husky"
+  ],
+  "homepage": "https://github.com/txpjs/taia/tree/master/packages/qa#readme",
+  "bugs": {
+    "url": "https://github.com/txpjs/taia/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txpjs/taia.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": {
+    "qa": "./bin"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/core": "7.18.9",
+    "@babel/eslint-parser": "7.18.9",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.5",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@jest/types": "27.5.1",
+    "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@typescript-eslint/eslint-plugin": "5.27.1",
+    "@typescript-eslint/parser": "5.27.1",
+    "@umijs/babel-preset-umi": "4.0.12",
+    "chalk": "^4.1.1",
+    "esbuild": "0.14.51",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-jest": "26.1.5",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.5.0",
+    "eslint-plugin-unicorn": "^20.0.0",
+    "fast-glob": "^3.2.4",
+    "identity-obj-proxy": "3.0.0",
+    "isomorphic-unfetch": "3.1.0",
+    "jest-esbuild": "0.2.9",
+    "os-locale": "^5.0.0",
+    "postcss": "^8.4.13",
+    "postcss-syntax": "0.36.2",
+    "prettier": "^2.3.2",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.2.18",
+    "prettier-plugin-two-style-order": "^1.0.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "25.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "1.1.2",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "jest": "^27.5.1",
+    "np": "^6.2.5",
+    "postcss-less": "6.0.0",
+    "rimraf": "^3.0.2",
+    "stylelint-config-css-modules": "4.1.0",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-declaration-block-no-ignored-properties": "2.5.0"
+  },
+  "authors": [
+    "tangxiaoping <txp1035@gmail.com> (https://github.com/txp1035)"
+  ]
+}
