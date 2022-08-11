@@ -7,11 +7,13 @@ import Mustache from '../compiled/mustache';
 import axios from '../compiled/axios';
 import fetch from '../compiled/node-fetch';
 import yParser from '../compiled/yargs-parser';
+import semver from '../compiled/semver';
 import * as logger from './logger';
 
 export {
   /** only node */
   crossSpawn,
+  semver,
   Mustache,
   chalk,
   inquirer,
