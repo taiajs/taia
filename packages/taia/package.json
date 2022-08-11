@@ -1,0 +1,28 @@
+{
+  "name": "taia",
+  "version": "0.1.0",
+  "description": "A React Native framework",
+  "homepage": "https://github.com/txpjs/taia#readme",
+  "bugs": {
+    "url": "https://github.com/txpjs/taia/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txpjs/taia.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "authors": [
+    "tangxiaoping <txp1035@gmail.com> (https://github.com/txp1035)"
+  ]
+}
