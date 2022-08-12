@@ -1,9 +1,11 @@
 import { yParser, semver, chalk, isLocalDev } from '@txpjs/utils-node';
+import verifyCommit from './verify-commit';
 
 const args = yParser(process.argv.slice(2), {
   alias: {
     version: ['v'],
     help: ['h'],
+    commit: ['c'],
   },
   boolean: ['version'],
 });
@@ -13,7 +15,6 @@ if (args.version && !args._[0]) {
   const local = isLocalDev() ? chalk.cyan('@local') : '';
   const { name, version } = require('../../package.json');
   console.log(`${name}@${version}${local}`);
-  process.exit(0);
 }
 
 if (!semver.satisfies(process.version, '>= 8.0.0')) {
@@ -21,26 +22,21 @@ if (!semver.satisfies(process.version, '>= 8.0.0')) {
   process.exit(1);
 }
 
-const option = args._[0];
-
-switch (option) {
-  case 'verifyCommit':
-    // eslint-disable-next-line global-require
-    require('../config/verify-commit');
-    break;
-
-  default:
-    if (args.h || args.help) {
-      const details = `
-      Commands:
-        ${chalk.cyan('verifyCommit')}    检查 commit 提交的信息
-      Examples:
-        ${chalk.gray('qa')}
-        qa -h
-        ${chalk.gray('verifyCommit ')}
-        qa verifyCommit
-        `.trim();
-      console.log(details);
+if (args.commit && !args._[0]) {
+  verifyCommit(args.commit, args.onlyUs).then((res) => {
+    if (res === 'error') {
+      process.exit(1);
     }
-    break;
+  });
+}
+
+if (args.help && !args._[0]) {
+  const help = `  Usage: qa [options]
+  Options:
+  -c, --commit                           check git commit
+  --onlyUs                               check git commit onlyUs
+  -v, --version                          print @txpjs/qa version
+  -h, --help                             print qa command line options (currently set)
+  `;
+  console.log(help);
 }

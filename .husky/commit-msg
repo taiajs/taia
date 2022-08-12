@@ -1,7 +1,5 @@
-#!/usr/bin/env sh
+#!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx --no-install esno scripts/verifyCommit.ts $1
-
-
+npx --no-install qa -c $1 --onlyUs
 
