@@ -1,7 +1,7 @@
-import { yParser, semver, chalk, isLocalDev } from '@txpjs/utils-node';
+import { yParser, semver, chalk, isLocalDev, crossSpawn } from '@txpjs/utils-node';
 import verifyCommit from './verify-commit';
-
-const args = yParser(process.argv.slice(2), {
+const oldArgs = process.argv.slice(2);
+const args = yParser(oldArgs, {
   alias: {
     version: ['v'],
     help: ['h'],
@@ -9,6 +9,7 @@ const args = yParser(process.argv.slice(2), {
   },
   boolean: ['version'],
 });
+const cwd = process.cwd();
 
 if (args.version && !args._[0]) {
   args._[0] = 'version';
@@ -40,3 +41,31 @@ if (args.help && !args._[0]) {
   `;
   console.log(help);
 }
+const command = args._[0];
+if (command === 'test') {
+  crossSpawn('jest', [], { stdio: 'inherit', cwd });
+}
+if (command === 'eslint') {
+  console.log(args);
+  console.log(process.argv.slice(2));
+  const lintArgs = [];
+  const lintJs = ['--cache', '--ext', '.js,.jsx,.ts,.tsx', '--format=pretty', './src'];
+  const lintFix = ['--fix', '--cache', '--ext', '.js,.jsx,.ts,.tsx', '--format=pretty', './src'];
+  crossSpawn('eslint', ['--cache', '--ext', '.js,.jsx,.ts,.tsx', './packages'], {
+    stdio: 'inherit',
+    cwd,
+  });
+}
+if (command === 'prettier') {
+}
+if (command === 'stylelint') {
+}
+if (command === 'husky') {
+}
+// "lint": "npm run lint:js && npm run lint:prettier && npm run tsc",
+// "lint-staged": "lint-staged",
+// "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+// "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src ",
+// "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+// "lint:prettier": "prettier -c --write \"src/**/*\" --end-of-line auto",
+// "tsc": "tsc --noEmit"
