@@ -20,7 +20,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "bin": {
-    "qa": "./bin"
+    "qa": "./bin/qa.js"
   },
   "files": [
     "dist",

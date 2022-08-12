@@ -4,7 +4,25 @@
 
 ### 待解决问题
 
-`pnpm i @txpjs/qa -w -D`报错`EISDIR: illegal operation on a directory, read`
+`pnpm i @txpjs/qa -w -D`报错`EISDIR: illegal operation on a directory, read` 解决: bin 目录里面试 index.js、package 配置如下会报错。
+
+```json
+{
+  "bin": {
+    "qa": "./bin"
+  }
+}
+```
+
+bin 目录文件改成 qa.js，package 配置改成如下就解决了。
+
+```json
+{
+  "bin": {
+    "qa": "./bin/qa.js"
+  }
+}
+```
 
 ### 完成了什么
 
