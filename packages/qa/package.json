@@ -1,6 +1,6 @@
 {
   "name": "@txpjs/qa",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha.0",
   "description": "A collection of front-end project quality assurance",
   "keywords": [
     "eslint",
@@ -39,7 +39,7 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
-    "@txpjs/utils-node": "^1.0.0-alpha.5",
+    "@txpjs/utils-node": "^1.0.0-alpha.6",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.9.0",
     "chalk": "^4.1.1",

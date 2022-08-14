@@ -1,6 +1,6 @@
 {
   "name": "@txpjs/utils-node",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "description": "utils for node",
   "homepage": "https://github.com/txpjs/taia/tree/master/packages/utils-node#readme",
   "bugs": {
