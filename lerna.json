@@ -3,7 +3,7 @@
   "workspaces": ["packages/*"],
   "command": {
     "publish": {
-      "ignoreChanges": ["*.md", "**/test/**"],
+      "ignoreChanges": ["*.md", "**/test/**", "**/taia/**", "**/utils-node/**"],
       "message": "chore(release): publish"
     }
   }

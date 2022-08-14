@@ -2,13 +2,13 @@
   "name": "@txpjs/utils-node",
   "version": "1.0.0-alpha.5",
   "description": "utils for node",
-  "homepage": "https://github.com/txp1035/txp/tree/master/packages/utils-node",
+  "homepage": "https://github.com/txpjs/taia/tree/master/packages/utils-node#readme",
   "bugs": {
-    "url": "https://github.com/txp1035/txp/issues"
+    "url": "https://github.com/txpjs/taia/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/txp1035/txp.git"
+    "url": "git+https://github.com/txpjs/taia.git"
   },
   "license": "MIT",
   "main": "dist/index.js",
