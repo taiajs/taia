@@ -19,6 +19,9 @@
     ],
     "*.ts?(x)": [
       "prettier --parser=typescript --write"
+    ],
+    "packages/**/*.json": [
+      "npx sort-package-json"
     ]
   },
   "devDependencies": {
