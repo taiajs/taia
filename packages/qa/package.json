@@ -1,0 +1,80 @@
+{
+  "name": "@txpjs/qa",
+  "version": "1.0.0",
+  "description": "A collection of front-end project quality assurance",
+  "keywords": [
+    "eslint",
+    "prettier",
+    "jest",
+    "stylelint",
+    "husky"
+  ],
+  "homepage": "https://github.com/txpjs/taia/tree/master/packages/qa#readme",
+  "bugs": {
+    "url": "https://github.com/txpjs/taia/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txpjs/taia.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": {
+    "qa": "./bin/qa.js"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.5",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@txpjs/utils-node": "^1.0.0-alpha.5",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.9.0",
+    "chalk": "^4.1.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-jest": "^24.0.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-unicorn": "^20.0.0",
+    "fast-glob": "^3.2.4",
+    "os-locale": "^5.0.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.2.18",
+    "prettier-plugin-two-style-order": "^1.0.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "np": "^6.2.5",
+    "rimraf": "^3.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "authors": [
+    "tangxiaoping <txp1035@gmail.com> (https://github.com/txp1035)"
+  ]
+}

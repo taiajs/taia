@@ -1,0 +1,10 @@
+{
+  "version": "independent",
+  "workspaces": ["packages/*"],
+  "command": {
+    "publish": {
+      "ignoreChanges": ["*.md", "**/test/**", "**/taia/**", "**/utils-node/**"],
+      "message": "chore(release): publish"
+    }
+  }
+}

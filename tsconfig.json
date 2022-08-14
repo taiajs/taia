@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    /* 指定基目录以解析非相对模块名称 */
+    "baseUrl": ".",
+    /* 指定一组将导入重新映射到其他查找位置的条目 */
+    "paths": {
+      "@/*": ["*"]
+    }
+  }
+}
