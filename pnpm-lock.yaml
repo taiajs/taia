@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@txpjs/qa': workspace:^1.0.0
+      '@txpjs/qa': workspace:^0.1.0
       esno: ^0.16.3
       father: ^4.0.0-rc.4
       husky: ^8.0.0
