@@ -40,9 +40,24 @@ if (isTsProject) {
 }
 
 module.exports = {
-  extends: ['prettier', 'plugin:react/recommended'],
+  extends: [
+    // eslint-config-prettier
+    'prettier',
+    // eslint-plugin-react
+    'plugin:react/recommended',
+  ],
   parser: '@babel/eslint-parser',
-  plugins: ['react', 'jest', 'unicorn', 'react-hooks'],
+  // eslint-plugin-jest
+  plugins: [
+    // eslint-plugin-react
+    'react',
+    // eslint-plugin-jest
+    'jest',
+    // eslint-plugin-unicorn
+    'unicorn',
+    // eslint-plugin-react-hooks
+    'react-hooks',
+  ],
   env: {
     browser: true,
     node: true,

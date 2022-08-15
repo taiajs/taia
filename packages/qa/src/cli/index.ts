@@ -1,4 +1,5 @@
-import { yParser, semver, chalk, isLocalDev, crossSpawn } from '@txpjs/utils-node';
+import { yParser, semver, chalk, isLocalDev, crossSpawn, fsExtra } from '@txpjs/utils-node';
+import { join } from 'path';
 import verifyCommit from './verify-commit';
 const oldArgs = process.argv.slice(2);
 const args = yParser(oldArgs, {
@@ -48,9 +49,9 @@ if (command === 'test') {
 if (command === 'eslint') {
   console.log(args);
   console.log(process.argv.slice(2));
-  const lintArgs = [];
-  const lintJs = ['--cache', '--ext', '.js,.jsx,.ts,.tsx', '--format=pretty', './src'];
-  const lintFix = ['--fix', '--cache', '--ext', '.js,.jsx,.ts,.tsx', '--format=pretty', './src'];
+  // const lintArgs = [];
+  // const lintJs = ['--cache', '--ext', '.js,.jsx,.ts,.tsx', '--format=pretty', './src'];
+  // const lintFix = ['--fix', '--cache', '--ext', '.js,.jsx,.ts,.tsx', '--format=pretty', './src'];
   crossSpawn('eslint', ['--cache', '--ext', '.js,.jsx,.ts,.tsx', './packages'], {
     stdio: 'inherit',
     cwd,
@@ -62,10 +63,42 @@ if (command === 'stylelint') {
 }
 if (command === 'husky') {
 }
-// "lint": "npm run lint:js && npm run lint:prettier && npm run tsc",
-// "lint-staged": "lint-staged",
-// "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
-// "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src ",
-// "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
-// "lint:prettier": "prettier -c --write \"src/**/*\" --end-of-line auto",
-// "tsc": "tsc --noEmit"
+if (command === 'init') {
+  const pkgPath = join(cwd, 'package.json');
+  const pkg = require(pkgPath);
+  // pkg
+  pkg.srcipt = {
+    ...(pkg?.srcipt || {}),
+    lint: 'npm run lint:js && npm run lint:prettier && npm run tsc',
+    'lint-staged': 'lint-staged',
+    'lint-staged:js': 'eslint --ext .js,.jsx,.ts,.tsx ',
+    'lint:fix': 'eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src ',
+    'lint:js': 'eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src',
+    'lint:prettier': 'prettier -c --write "src/**/*" --end-of-line auto',
+    tsc: 'tsc --noEmit',
+    prepare: 'husky install',
+    prettier: 'prettier -c --write "src/**/*"',
+    test: 'jest',
+    // sort: 'npx sort-package-json',
+    // 'test:component': 'jest ./src/components',
+    // 'test:e2e': 'node ./tests/run-tests.js',
+  };
+  pkg['lint-staged'] = {
+    '*.{jsx,less,md,json}': ['prettier --write'],
+    '*.ts?(x)': ['prettier --parser=typescript --write'],
+    'packages/*/package.json': ['npx sort-package-json'],
+    './package.json': ['npx sort-package-json'],
+  };
+  pkg.devDependencies = {
+    ...(pkg?.devDependencies || {}),
+    eslint: '^7.11.0',
+    stylelint: '^13.0.0',
+    typescript: '^4.5.4',
+    prettier: '^2.3.2',
+    husky: '^8.0.0',
+    'lint-staged': '^13.0.3',
+    'ts-node': '^10.9.1',
+    jest: '^28.1.3',
+  };
+  fsExtra.writeFileSync(pkgPath, JSON.stringify(pkg));
+}

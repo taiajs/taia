@@ -36,7 +36,7 @@ export function createTestConfig(opts?: {
     },
     testTimeout: 30000,
     modulePathIgnorePatterns: ['<rootDir>/packages/.+/compiled', '<rootDir>/packages/.+/fixtures'],
-    setupFiles: [require.resolve('./setupFiles/shim')],
+    setupFiles: [require.resolve('./shim')],
   };
   if (opts?.target === 'browser') {
     config.testEnvironment = 'jsdom';
