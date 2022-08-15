@@ -1,0 +1,10 @@
+/lambda/
+/scripts
+/config
+.history
+public
+dist
+.taia
+mock
+compiled
+packages/crons
