@@ -1,0 +1,16 @@
+{
+  "name": "@example/qa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "qa jest",
+    "prettier": "qa prettier --parser=typescript --write *.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@txpjs/qa": "workspace:*"
+  }
+}
