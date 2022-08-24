@@ -1,6 +1,7 @@
 import { yParser, semver, chalk, isLocalDev, crossSpawn, fsExtra } from '@txpjs/utils-node';
 import { join } from 'path';
 import verifyCommit from './verify-commit';
+import cmdProxy from './cmdProxy';
 const oldArgs = process.argv.slice(2);
 const args = yParser(oldArgs, {
   alias: {
@@ -43,25 +44,34 @@ if (args.help && !args._[0]) {
   console.log(help);
 }
 const command = args._[0];
-if (command === 'test') {
-  crossSpawn('jest', [], { stdio: 'inherit', cwd });
-}
+
 if (command === 'eslint') {
-  console.log(args);
-  console.log(process.argv.slice(2));
-  // const lintArgs = [];
-  // const lintJs = ['--cache', '--ext', '.js,.jsx,.ts,.tsx', '--format=pretty', './src'];
-  // const lintFix = ['--fix', '--cache', '--ext', '.js,.jsx,.ts,.tsx', '--format=pretty', './src'];
-  crossSpawn('eslint', ['--cache', '--ext', '.js,.jsx,.ts,.tsx', './packages'], {
-    stdio: 'inherit',
-    cwd,
-  });
+  const prettier = new cmdProxy({ cwd, pkg: 'eslint' });
+  prettier.run();
 }
 if (command === 'prettier') {
+  const prettier = new cmdProxy({ cwd, pkg: 'prettier' });
+  prettier.run();
 }
 if (command === 'stylelint') {
+  const prettier = new cmdProxy({ cwd, pkg: 'stylelint' });
+  prettier.run();
+}
+if (command === 'tsc') {
+  const prettier = new cmdProxy({ cwd, pkg: 'typescript', cmd: 'tsc' });
+  prettier.run();
 }
 if (command === 'husky') {
+  const prettier = new cmdProxy({ cwd, pkg: 'husky' });
+  prettier.run();
+}
+if (command === 'zx') {
+  const prettier = new cmdProxy({ cwd, pkg: 'zx' });
+  prettier.run();
+}
+if (command === 'jest') {
+  const prettier = new cmdProxy({ cwd, pkg: 'jest' });
+  prettier.run();
 }
 if (command === 'init') {
   const pkgPath = join(cwd, 'package.json');
