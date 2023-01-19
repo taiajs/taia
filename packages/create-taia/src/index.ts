@@ -49,9 +49,9 @@ interface ITemplateParams {
 
 export default async ({ cwd, args }: { cwd: string; args: IArgs }) => {
   const [name] = args._;
-  let npmClient = 'pnpm' as NpmClient;
+  let npmClient = 'yarn' as NpmClient;
   let registry = 'https://registry.npmjs.org/';
-  let appTemplate = 'app';
+  let appTemplate = 'expo';
   const { username, email } = await getGitInfo();
   let author = email && username ? `${username} <${email}>` : '';
 
@@ -59,17 +59,17 @@ export default async ({ cwd, args }: { cwd: string; args: IArgs }) => {
   if (!args.default) {
     const response = await prompts(
       [
-        {
-          type: 'select',
-          name: 'appTemplate',
-          message: 'Pick Umi App Template',
-          choices: [
-            { title: 'Simple App', value: 'app' },
-            { title: 'Ant Design Pro', value: 'max' },
-            { title: 'Vue Simple App', value: 'vue-app' },
-          ],
-          initial: 0,
-        },
+        // {
+        //   type: 'select',
+        //   name: 'appTemplate',
+        //   message: 'Pick Umi App Template',
+        //   choices: [
+        //     { title: 'Simple App', value: 'app' },
+        //     { title: 'Ant Design Pro', value: 'max' },
+        //     { title: 'Vue Simple App', value: 'vue-app' },
+        //   ],
+        //   initial: 0,
+        // },
         {
           type: 'select',
           name: 'npmClient',
@@ -81,7 +81,7 @@ export default async ({ cwd, args }: { cwd: string; args: IArgs }) => {
             { title: 'yarn', value: 'yarn' },
             { title: 'pnpm', value: 'pnpm' },
           ],
-          initial: 4,
+          initial: 3,
         },
         {
           type: 'select',
@@ -103,9 +103,11 @@ export default async ({ cwd, args }: { cwd: string; args: IArgs }) => {
         },
       },
     );
+    // TODO: 其他仓库安装会导致应用不能运行
     npmClient = response.npmClient;
     registry = response.registry;
-    appTemplate = response.appTemplate;
+    // 只有一种模式暂时写死
+    appTemplate = response.appTemplate || 'expo';
   }
 
   const pluginPrompts = [
@@ -158,6 +160,7 @@ export default async ({ cwd, args }: { cwd: string; args: IArgs }) => {
     data: args.default
       ? testData
       : ({
+          name: name || 'myapp',
           version: version.includes('-canary.') ? version : `^${version}`,
           npmClient,
           registry,

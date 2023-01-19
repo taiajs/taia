@@ -24,3 +24,5 @@ $ cd taia
 ```bash
 $ pnpm i && pnpm build
 ```
+
+### CLI 命令调试

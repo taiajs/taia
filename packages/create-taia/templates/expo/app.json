@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "myapp",
+    "slug": "myapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.txp1035.myapp"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.txp1035.myapp"
+    },
+    "web": {
+      "favicon": "./src/assets/images/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c173e6a5-fe9d-4581-aaa8-ecc2e46aa3fa"
+      }
+    }
+  }
+}

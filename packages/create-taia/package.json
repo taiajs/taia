@@ -1,28 +1,29 @@
 {
-  "name": "create-umi",
+  "name": "create-taia",
   "version": "4.0.47",
-  "description": "create-umi",
-  "homepage": "https://github.com/umijs/umi/tree/master/packages/create-umi#readme",
-  "bugs": "https://github.com/umijs/umi/issues",
+  "description": "create-taia",
+  "homepage": "https://github.com/txpjs/taia/tree/master/packages/create-taia#readme",
+  "bugs": {
+    "url": "https://github.com/txpjs/taia/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi"
+    "url": "git+https://github.com/txpjs/taia.git"
   },
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "create-umi": "bin/create-umi.js"
+    "create-taia": "bin/create-taia.js"
   },
   "files": [
     "dist",
     "templates"
   ],
   "scripts": {
-    "build": "umi-scripts father build",
-    "build:deps": "umi-scripts bundleDeps",
-    "dev": "umi-scripts father dev",
-    "test": "umi-scripts jest-turbo"
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
     "@umijs/utils": "4.0.47"
@@ -31,6 +32,6 @@
     "access": "public"
   },
   "authors": [
-    "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
+    "tangxiaoping <txp1035@gmail.com> (https://github.com/txp1035)"
   ]
 }
