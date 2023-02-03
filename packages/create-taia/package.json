@@ -1,0 +1,37 @@
+{
+  "name": "create-taia",
+  "version": "4.0.47",
+  "description": "create-taia",
+  "homepage": "https://github.com/txpjs/taia/tree/master/packages/create-taia#readme",
+  "bugs": {
+    "url": "https://github.com/txpjs/taia/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txpjs/taia.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "create-taia": "bin/create-taia.js"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@umijs/utils": "4.0.47"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "tangxiaoping <txp1035@gmail.com> (https://github.com/txp1035)"
+  ]
+}
