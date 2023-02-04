@@ -1,5 +1,8 @@
 {
-  "name": "txp-scripts",
+  "name": "taia-scripts",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "bin": {
+    "taia-scripts": "bin/taia-scripts.js"
+  }
 }

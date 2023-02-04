@@ -1,6 +1,5 @@
 import { fork } from 'child_process';
 import path from 'path';
-import type { yParser } from '@txpjs/utils-node';
 
 export interface CmdOpts {
   cwd: string;

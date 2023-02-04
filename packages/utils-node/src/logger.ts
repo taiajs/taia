@@ -1,6 +1,7 @@
 import { join } from 'path';
 import pino, { type Logger } from 'pino';
-import chalk from '../compiled/chalk';
+// import chalk from '../compiled/chalk';
+import chalk from 'chalk';
 import fsExtra from '../compiled/fs-extra';
 
 const loggerDir = join(process.cwd(), 'node_modules/.cache/logger');
