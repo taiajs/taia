@@ -11,6 +11,8 @@
 
 This is an out-of-the-box react native framework for the APP.
 
+Just as next corresponds to react, this framework corresponds to react native
+
 1. The scaffolding is currently available
 2. The framework is under development...
 
