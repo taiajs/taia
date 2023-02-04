@@ -1,12 +1,7 @@
-# taia &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/taiajs/taia/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/taia.svg?style=flat)](https://www.npmjs.com/package/taia) [![CircleCI Status](https://circleci.com/gh/taiajs/taia.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/taiajs/taia) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/taiajs/taia/blob/main/CONTRIBUTING.md)
+# taia &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/taiajs/taia/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/taia.svg?style=flat)](https://www.npmjs.com/package/taia) [![CI Status](https://github.com/taiajs/taia/workflows/CI/badge.svg?branch=main&event=push)](https://github.com/taiajs/taia) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/taiajs/taia/blob/main/CONTRIBUTING.md)
 
 <!-- 曾梦想仗剑走天涯，程序员(me)=>剑客，代码(taia)=>剑器 -->
 <!-- 泰阿别名太阿是一把威道之剑，只有持剑之人内心之威才能激发出剑道之威，出炉时天时、地利、人和三元归一，剑未成而剑气已存于天地之间 -->
-<p>
-  <a href="https://www.npmjs.com/package/taia"><img src="https://badgen.net/npm/v/taia" alt="Version" /></a>
-  <a href="https://github.com/taiajs/taia"><img src="https://github.com/taiajs/taia/workflows/CI/badge.svg?branch=main&event=push" alt="build status" /></a>
-  <a href="https://www.npmjs.com/package/taia"><img src="https://badgen.net/npm/license/taia" alt="License" /></a>
-</p>
 
 This is an out-of-the-box react native framework for the APP.
 
