@@ -5,7 +5,7 @@
 <p>
   <a href="https://www.npmjs.com/package/taia"><img src="https://badgen.net/npm/v/taia" alt="Version" /></a>
   <a href="https://www.npmjs.com/package/taia"><img src="https://badgen.net/npm/dm/taia" alt="Downloads" /></a>
-  <a href="https://github.com/taiajs/taia"><img src="https://github.com/taiajs/taia/workflows/CI/badge.svg?branch=master&event=push" alt="build status" /></a>
+  <a href="https://github.com/taiajs/taia"><img src="https://github.com/taiajs/taia/workflows/CI/badge.svg?branch=main&event=push" alt="build status" /></a>
   <a href="https://www.npmjs.com/package/taia"><img src="https://badgen.net/npm/license/taia" alt="License" /></a>
 </p>
 
