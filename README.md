@@ -3,12 +3,10 @@
 <!-- 曾梦想仗剑走天涯，程序员(me)=>剑客，代码(taia)=>剑器 -->
 <!-- 泰阿别名太阿是一把威道之剑，只有持剑之人内心之威才能激发出剑道之威，出炉时天时、地利、人和三元归一，剑未成而剑气已存于天地之间 -->
 
-This is an out-of-the-box react native framework for the APP.
+Taia is a React Native framework for faster app development.
 
-Just as next corresponds to react, this framework corresponds to react native
-
-1. The scaffolding is currently available
-2. The framework is under development...
+- Out of the box: Built-in routing, build, deployment, testing, lint, etc., all you need is one umi dependency to get started.
+- Complete routing: Supports configuration or file system based.
 
 ## create app
 
@@ -42,3 +40,15 @@ $ a
 ```shell
 $ npm run build
 ```
+
+## Contributing
+
+Development of Taia happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving Taia.
+
+### [Contributing Guide](https://github.com/taiajs/taia/blob/main/CONTRIBUTING.md)
+
+Read our [contributing guide](https://github.com/taiajs/taia/blob/main/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Taia.
+
+### License
+
+Taia is [MIT licensed](./LICENSE).
