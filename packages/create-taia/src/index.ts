@@ -107,7 +107,8 @@ export default async ({ cwd, args }: { cwd: string; args: IArgs }) => {
     npmClient = response.npmClient;
     registry = response.registry;
     // 只有一种模式暂时写死
-    appTemplate = response.appTemplate || 'expo';
+    // appTemplate = response.appTemplate;
+    appTemplate = 'expo';
   }
 
   const pluginPrompts = [

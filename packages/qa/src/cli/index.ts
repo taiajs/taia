@@ -1,4 +1,4 @@
-import { yParser, semver, chalk, isLocalDev, crossSpawn, fsExtra } from '@txpjs/utils-node';
+import { yParser, semver, chalk, isLocalDev, fsExtra } from '@txpjs/utils-node';
 import { join } from 'path';
 import verifyCommit from './verify-commit';
 import cmdProxy from './cmdProxy';

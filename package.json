@@ -10,7 +10,7 @@
     "publish": "pnpm build & lerna publish",
     "republish": "lerna publish from-git",
     "test": "qa jest",
-    "tsc": "qa tsc --noEmit",
+    "tsc:check": "qa tsc --noEmit",
     "turbo:clean": "rimraf ./node_modules/.cache/turbo"
   },
   "lint-staged": {
@@ -35,6 +35,7 @@
     "husky": "^8.0.3",
     "lerna": "^5.1.7",
     "lint-staged": "^13.0.3",
+    "taia-scripts": "workspace:*",
     "ts-node": "^10.9.1",
     "turbo": "^1.3.1",
     "typescript": "^4.5.4"
