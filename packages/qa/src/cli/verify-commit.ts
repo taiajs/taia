@@ -34,7 +34,7 @@ export default async (msgPath: string, onlyUs: boolean) => {
         ${chalk.green(`workflow(模块):  github workflow修改`)}
         ${chalk.green(`chore(模块): 不修改src或者test的其余修改，例如构建过程或辅助工具的变动`)}
         ${chalk.green(`Merge(模块): git merge生成的提交`)}
-        ${chalk.red(`See https://github.com/txpjs/taia/.github/commit-convention.md\n`)}`,
+        ${chalk.red(`See https://github.com/taiajs/taia/.github/commit-convention.md\n`)}`,
       );
     } else {
       console.error(
@@ -52,7 +52,7 @@ export default async (msgPath: string, onlyUs: boolean) => {
         ${chalk.green(
           `Other commit types: refactor, perf, workflow, build, CI, typos, tests, types, wip, release, dep\n`,
         )}
-        ${chalk.red(`See https://github.com/txpjs/taia/.github/commit-convention.md\n`)}`,
+        ${chalk.red(`See https://github.com/taiajs/taia/.github/commit-convention.md\n`)}`,
       );
     }
     return 'error';

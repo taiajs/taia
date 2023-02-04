@@ -1,14 +1,14 @@
 {
   "name": "create-taia",
-  "version": "4.0.47",
+  "version": "0.0.1",
   "description": "create-taia",
-  "homepage": "https://github.com/txpjs/taia/tree/master/packages/create-taia#readme",
+  "homepage": "https://github.com/taiajs/taia/tree/master/packages/create-taia#readme",
   "bugs": {
-    "url": "https://github.com/txpjs/taia/issues"
+    "url": "https://github.com/taiajs/taia/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/txpjs/taia.git"
+    "url": "git+https://github.com/taiajs/taia.git"
   },
   "license": "MIT",
   "main": "dist/index.js",

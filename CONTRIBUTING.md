@@ -15,7 +15,7 @@
 ### Clone 项目
 
 ```bash
-$ git clone https://github.com/txpjs/taia.git
+$ git clone https://github.com/taiajs/taia.git
 $ cd taia
 ```
 

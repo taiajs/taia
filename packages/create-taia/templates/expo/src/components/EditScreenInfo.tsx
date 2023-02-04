@@ -46,7 +46,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
 }
 
 function handleHelpPress() {
-  WebBrowser.openBrowserAsync('https://github.com/txpjs/taia');
+  WebBrowser.openBrowserAsync('https://github.com/taiajs/taia');
 }
 
 const styles = StyleSheet.create({

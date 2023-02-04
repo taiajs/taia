@@ -5,7 +5,7 @@ import chalk from 'chalk';
 import fsExtra from '../compiled/fs-extra';
 
 const loggerDir = join(process.cwd(), 'node_modules/.cache/logger');
-const loggerPath = join(loggerDir, 'txpjs.log');
+const loggerPath = join(loggerDir, 'taiajs.log');
 
 const customLevels = {
   ready: 31,
