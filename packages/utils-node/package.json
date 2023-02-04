@@ -28,7 +28,7 @@
     "cross-spawn": "7.0.3",
     "inquirer": "^7.3.0",
     "mustache": "4.2.0",
-    "node-fetch": "^3.2.10",
+    "node-fetch": "^2.0.0",
     "pino": "^8.1.0",
     "pino-pretty": "^8.1.0"
   },
