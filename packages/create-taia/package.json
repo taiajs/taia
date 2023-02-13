@@ -29,7 +29,8 @@
     "@umijs/utils": "4.0.47"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "authors": [
     "tangxiaoping <txp1035@gmail.com> (https://github.com/txp1035)"
