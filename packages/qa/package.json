@@ -1,6 +1,6 @@
 {
   "name": "@txpjs/qa",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "A collection of front-end project quality assurance",
   "keywords": [
     "eslint",
