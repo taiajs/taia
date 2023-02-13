@@ -1,13 +1,14 @@
 {
   "private": true,
   "scripts": {
+    "bp": "npm run build && lerna publish",
     "build": "turbo run build",
     "husky": "qa husky install",
     "lint": "npm run lint:js && npm run tsc",
     "lint-staged:js": "qa eslint --ext .js,.jsx,.ts,.tsx ",
     "lint:fix": "qa eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./packages",
     "lint:js": "qa eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./packages",
-    "publish": "pnpm build & lerna publish",
+    "publish": "lerna publish",
     "republish": "lerna publish from-git",
     "test": "qa jest",
     "tsc:check": "qa tsc --noEmit",
